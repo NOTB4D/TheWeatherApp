@@ -19,6 +19,8 @@
 		B8D521A427C150D100D1D8DB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521A327C150D100D1D8DB /* NetworkService.swift */; };
 		B8D521A627C1583500D1D8DB /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521A527C1583500D1D8DB /* Manager.swift */; };
 		B8D521A827C1588300D1D8DB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521A727C1588300D1D8DB /* Errors.swift */; };
+		B8D521AA27C1598100D1D8DB /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521A927C1598100D1D8DB /* ClientService.swift */; };
+		B8D521AC27C15B3C00D1D8DB /* CurrentWeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521AB27C15B3C00D1D8DB /* CurrentWeatherDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B8D521A327C150D100D1D8DB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B8D521A527C1583500D1D8DB /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		B8D521A727C1588300D1D8DB /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		B8D521A927C1598100D1D8DB /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
+		B8D521AB27C15B3C00D1D8DB /* CurrentWeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				B8D521A327C150D100D1D8DB /* NetworkService.swift */,
 				B8D521A527C1583500D1D8DB /* Manager.swift */,
 				B8D521A727C1588300D1D8DB /* Errors.swift */,
+				B8D521A927C1598100D1D8DB /* ClientService.swift */,
+				B8D521AB27C15B3C00D1D8DB /* CurrentWeatherDTO.swift */,
 			);
 			path = TheWeatherApp;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				B8D5217427C14F1E00D1D8DB /* AppDelegate.swift in Sources */,
 				B8D521A427C150D100D1D8DB /* NetworkService.swift in Sources */,
 				B8D5217627C14F1E00D1D8DB /* SceneDelegate.swift in Sources */,
+				B8D521AC27C15B3C00D1D8DB /* CurrentWeatherDTO.swift in Sources */,
 				B8D521A827C1588300D1D8DB /* Errors.swift in Sources */,
+				B8D521AA27C1598100D1D8DB /* ClientService.swift in Sources */,
 				B8D521A627C1583500D1D8DB /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
