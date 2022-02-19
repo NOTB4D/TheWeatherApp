@@ -12,3 +12,8 @@ import Foundation
 protocol NetworkServiceProtocol {
     func get<T: Decodable>(from endpoint: String, completion: @escaping (T? , NetworkError?)-> Void )
 }
+
+
+protocol ClientNetworkServiceProtocol {
+    func getCurrentWeather( latitude:Double, longitude: Double, complation: @escaping(CurrentWeatherDTO?, NetworkError?)-> Void)
+}

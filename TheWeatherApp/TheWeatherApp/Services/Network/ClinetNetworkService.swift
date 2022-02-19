@@ -8,9 +8,9 @@
 import Foundation
 
 
-class ClinetNetworkService {
+class ClinetNetworkService: ClientNetworkServiceProtocol {
     
-    enum Endpoints: String{
+   private enum Endpoints: String{
         case currentWeather = "weather?lat=%d&lon=%d"
         
         func urlString(arguments: CVarArg...)-> String {
@@ -20,7 +20,7 @@ class ClinetNetworkService {
     
    private let networkService: NetworkServiceProtocol = NetworkService()
     
-    func getCurrentWeather(with latitude:Double, longitude: Double, complation: @escaping(CurrentWeatherDTO?, NetworkError?)-> Void){
+    func getCurrentWeather(latitude:Double, longitude: Double, complation: @escaping(CurrentWeatherDTO?, NetworkError?)-> Void){
         
         let urlString = Endpoints.currentWeather.urlString(arguments: latitude, longitude)
         networkService.get(from: urlString, completion: complation)
