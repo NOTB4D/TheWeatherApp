@@ -11,5 +11,6 @@ import Foundation
 enum NetworkError: Error{
     case invalitUrl
     case custom(String?)
+    case decoding(String?)
     case noData
 }

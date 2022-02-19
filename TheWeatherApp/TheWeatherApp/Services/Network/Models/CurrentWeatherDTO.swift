@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// MARK: CurrentWeatherDto
 struct CurrentWeatherDTO: Codable {
     let weather: [Weather]
     let main: Main

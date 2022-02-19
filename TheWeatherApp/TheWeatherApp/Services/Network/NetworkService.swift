@@ -10,8 +10,8 @@ import Foundation
 
 class NetworkService: NetworkServiceProtocol {
     
-    private let apiKey = "48457c9c3e30f6ce6adbeb8310abd454"
-    private let baseUrl = "api.openweathermap.org/data/2.5/"
+    private let apiKey = "&appid=48457c9c3e30f6ce6adbeb8310abd454"
+    private let baseUrl = "http://api.openweathermap.org/data/2.5/"
     
     
     func get<T: Decodable>(from endpoint: String, completion: @escaping (T? , NetworkError?)-> Void ){
@@ -23,7 +23,7 @@ class NetworkService: NetworkServiceProtocol {
     }
    private func createDataTask<T: Decodable>(from url: URL, completion: @escaping (T? , NetworkError?)-> Void ) -> URLSessionDataTask{
         return  URLSession.shared.dataTask(with: url) { data, urlResponse, error in
-            guard error != nil else {
+            guard error == nil else {
                 completion(nil, NetworkError.custom(error?.localizedDescription))
                 return
             }
@@ -38,7 +38,7 @@ class NetworkService: NetworkServiceProtocol {
                 completion (decodedData , nil )
                 
             }catch {
-                completion(nil, NetworkError.custom(error.localizedDescription))
+                completion(nil, NetworkError.decoding(error.localizedDescription))
             }
         }
     }

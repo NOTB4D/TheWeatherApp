@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     
     func getCurrentWeather(latitude: Double, longitude: Double){
         netverkService.getCurrentWeather(latitude: latitude, longitude: longitude) { response, error in
+            
         }
     }
 }
