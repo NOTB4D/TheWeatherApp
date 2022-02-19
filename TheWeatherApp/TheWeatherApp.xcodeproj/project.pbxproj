@@ -24,6 +24,7 @@
 		B8D521B127C1622600D1D8DB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521B027C1622600D1D8DB /* LocationManager.swift */; };
 		B8D521B527C16B0100D1D8DB /* HourlyWeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521B427C16B0100D1D8DB /* HourlyWeatherDTO.swift */; };
 		B8D521B727C16B2900D1D8DB /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521B627C16B2900D1D8DB /* WeatherDTO.swift */; };
+		B8D521BB27C17B6500D1D8DB /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D521BA27C17B6500D1D8DB /* Double+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B8D521B027C1622600D1D8DB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8D521B427C16B0100D1D8DB /* HourlyWeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherDTO.swift; sourceTree = "<group>"; };
 		B8D521B627C16B2900D1D8DB /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
+		B8D521BA27C17B6500D1D8DB /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +117,14 @@
 		B8D5217227C14F1E00D1D8DB /* TheWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B8D521B827C17AFE00D1D8DB /* Utilitys */,
 				B8D5217327C14F1E00D1D8DB /* AppDelegate.swift */,
 				B8D5217527C14F1E00D1D8DB /* SceneDelegate.swift */,
 				B8D5217927C14F1E00D1D8DB /* Main.storyboard */,
 				B8D5217C27C14F2000D1D8DB /* Assets.xcassets */,
 				B8D5217E27C14F2000D1D8DB /* LaunchScreen.storyboard */,
 				B8D5218127C14F2000D1D8DB /* Info.plist */,
-				B8D521B227C1623400D1D8DB /* Sceens */,
+				B8D521B227C1623400D1D8DB /* Screens */,
 				B8D521AD27C161D300D1D8DB /* Services */,
 			);
 			path = TheWeatherApp;
@@ -173,12 +176,12 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		B8D521B227C1623400D1D8DB /* Sceens */ = {
+		B8D521B227C1623400D1D8DB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				B8D5217727C14F1E00D1D8DB /* ViewController.swift */,
 			);
-			path = Sceens;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		B8D521B327C1698300D1D8DB /* Models */ = {
@@ -189,6 +192,22 @@
 				B8D521B627C16B2900D1D8DB /* WeatherDTO.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B8D521B827C17AFE00D1D8DB /* Utilitys */ = {
+			isa = PBXGroup;
+			children = (
+				B8D521B927C17B0F00D1D8DB /* Extentions */,
+			);
+			path = Utilitys;
+			sourceTree = "<group>";
+		};
+		B8D521B927C17B0F00D1D8DB /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B8D521BA27C17B6500D1D8DB /* Double+.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +351,7 @@
 				B8D521A827C1588300D1D8DB /* Errors.swift in Sources */,
 				B8D521AA27C1598100D1D8DB /* ClinetNetworkService.swift in Sources */,
 				B8D521A627C1583500D1D8DB /* Manager.swift in Sources */,
+				B8D521BB27C17B6500D1D8DB /* Double+.swift in Sources */,
 				B8D521B127C1622600D1D8DB /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
