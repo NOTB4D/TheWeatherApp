@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         return locationManager
     }()
     
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -25,14 +28,35 @@ class ViewController: UIViewController {
         
     }
     
-    func getCurrentWeather(latitude: Double, longitude: Double){
+    func getCurrentWeather(latitude: Double, longitude: Double, completion: @escaping (CurrentWeatherDTO?)-> Void){
         netverkService.getCurrentWeather(latitude: latitude, longitude: longitude) { response, error in
             
+            if error != nil {
+                // alert > Show
+                completion( nil )
+            }else {
+                completion( response )
+            }
+        }
+    }
+    
+    func updateLabel(latitude: Double, longitude: Double){
+        getCurrentWeather(latitude: latitude, longitude: longitude) { [weak self] response in
+            guard let self = self else {return}
+            guard let weather = response else {return}
+            
+            DispatchQueue.main.async {
+                
+                self.temperatureLabel.text = String(Int( weather.main.temperature.kelvinToCelcius())) + "°"
+                self.nameLabel.text = weather.name
+               // self.dateLabel.text = weather.date
+            }
         }
     }
 }
 extension ViewController: LocationManagerDelegate{
     func didUpdateLocations(latitude: Double, longitude: Double) {
-        getCurrentWeather(latitude: latitude, longitude: longitude)
+        updateLabel(latitude: latitude, longitude: longitude)
+        
     }
 }
