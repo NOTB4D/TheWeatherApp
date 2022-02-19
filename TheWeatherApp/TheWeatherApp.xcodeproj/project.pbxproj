@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8A3E17D27C192320091AD1C /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3E17C27C192320091AD1C /* Int+.swift */; };
 		B8D5217427C14F1E00D1D8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5217327C14F1E00D1D8DB /* AppDelegate.swift */; };
 		B8D5217627C14F1E00D1D8DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5217527C14F1E00D1D8DB /* SceneDelegate.swift */; };
 		B8D5217827C14F1E00D1D8DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5217727C14F1E00D1D8DB /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8A3E17C27C192320091AD1C /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		B8D5217027C14F1E00D1D8DB /* TheWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D5217327C14F1E00D1D8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8D5217527C14F1E00D1D8DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B8D521BA27C17B6500D1D8DB /* Double+.swift */,
+				B8A3E17C27C192320091AD1C /* Int+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				B8D5217827C14F1E00D1D8DB /* ViewController.swift in Sources */,
 				B8D5217427C14F1E00D1D8DB /* AppDelegate.swift in Sources */,
+				B8A3E17D27C192320091AD1C /* Int+.swift in Sources */,
 				B8D521B727C16B2900D1D8DB /* WeatherDTO.swift in Sources */,
 				B8D521A427C150D100D1D8DB /* NetworkService.swift in Sources */,
 				B8D5217627C14F1E00D1D8DB /* SceneDelegate.swift in Sources */,

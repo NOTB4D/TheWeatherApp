@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                 
                 self.temperatureLabel.text = String(Int( weather.main.temperature.kelvinToCelcius())) + "°"
                 self.nameLabel.text = weather.name
-               // self.dateLabel.text = weather.date
+                self.dateLabel.text = weather.date.convertoToString()
             }
         }
     }
