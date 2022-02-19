@@ -17,3 +17,11 @@ protocol NetworkServiceProtocol {
 protocol ClientNetworkServiceProtocol {
     func getCurrentWeather( latitude:Double, longitude: Double, complation: @escaping(CurrentWeatherDTO?, NetworkError?)-> Void)
 }
+
+protocol LocationManagerDelegate: NSObject {
+    func didUpdateLocations(latitude:Double, longitude:Double)
+}
+
+protocol LocationManagerProtocol {
+    func requestLocation()
+}
