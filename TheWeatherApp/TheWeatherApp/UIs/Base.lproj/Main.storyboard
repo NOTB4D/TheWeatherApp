@@ -8,29 +8,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainWeatherViewController" customModule="TheWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CtN-Lc-9X5">
-                                <rect key="frame" x="178.5" y="144" width="57" height="104"/>
+                                <rect key="frame" x="107" y="144" width="200" height="308"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-ms-Z3p">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja7-T1-7kT">
-                                        <rect key="frame" x="0.0" y="54" width="57" height="50"/>
+                                        <rect key="frame" x="0.0" y="54" width="200" height="50"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="76"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiD-AL-6h0">
+                                        <rect key="frame" x="0.0" y="108" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="9BE-pY-MhJ"/>
+                                            <constraint firstAttribute="width" constant="200" id="Yg2-0I-s3P"/>
+                                        </constraints>
+                                    </containerView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5B-dA-29P">
@@ -43,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="J5B-dA-29P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Mau-WP-6MX"/>
                             <constraint firstItem="CtN-Lc-9X5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="UAW-tw-BVW"/>
                             <constraint firstItem="J5B-dA-29P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="VQR-EY-pwm"/>
                             <constraint firstItem="CtN-Lc-9X5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hI7-vH-Q6y"/>
@@ -51,13 +59,14 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="J5B-dA-29P" id="8HI-Lz-zUD"/>
+                        <outlet property="hourlyWeatherContainerView" destination="RiD-AL-6h0" id="gQ8-1X-E8b"/>
                         <outlet property="nameLabel" destination="idZ-ms-Z3p" id="1b5-OL-hgo"/>
                         <outlet property="temperatureLabel" destination="Ja7-T1-7kT" id="xqC-yJ-aY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
