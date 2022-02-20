@@ -22,11 +22,21 @@ class MainWeatherViewController: UIViewController {
     @IBOutlet weak var hourlyWeatherContainerView: UIView!
     
     
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationService.requestLocation()
-        
+        addHourlyWeatherView()
+    }
+    
+    func addHourlyWeatherView() {
+        let vc = HourlyWeatherViewController(nibName: HourlyWeatherViewController.nibName
+                                             , bundle: nil)
+        vc.view.frame = hourlyWeatherContainerView.bounds
+        hourlyWeatherContainerView.clipsToBounds = true
+        hourlyWeatherContainerView.addSubview(vc.view)
     }
     
     func getCurrentWeather(latitude: Double, longitude: Double, completion: @escaping (CurrentWeatherDTO?)-> Void){
