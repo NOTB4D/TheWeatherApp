@@ -28,12 +28,13 @@ class MainWeatherViewController: UIViewController {
         super.viewDidLoad()
         
         locationService.requestLocation()
-        addHourlyWeatherView()
+
     }
     
-    func addHourlyWeatherView() {
+    func addHourlyWeatherView(latitude: Double?, longitude: Double?) {
         let vc = HourlyWeatherViewController(nibName: HourlyWeatherViewController.nibName
                                              , bundle: nil)
+        vc.configure(networkService: netverkService, latitude: latitude, longitude: longitude)
         vc.view.frame = hourlyWeatherContainerView.bounds
         hourlyWeatherContainerView.clipsToBounds = true
         hourlyWeatherContainerView.addSubview(vc.view)
@@ -67,7 +68,7 @@ class MainWeatherViewController: UIViewController {
 }
 extension MainWeatherViewController: LocationManagerDelegate{
     func didUpdateLocations(latitude: Double, longitude: Double) {
+        addHourlyWeatherView(latitude: latitude, longitude: longitude)
         updateLabel(latitude: latitude, longitude: longitude)
-        
     }
 }
