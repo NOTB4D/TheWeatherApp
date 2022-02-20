@@ -16,28 +16,31 @@ class MainWeatherViewController: UIViewController {
         return locationManager
     }()
     
+    private var isHourlyWeatherAdded = false
+    private var hourlyWeatherViewControler: HourlyWeatherViewController!
+    
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var hourlyWeatherContainerView: UIView!
     
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationService.requestLocation()
-
+        
     }
     
     func addHourlyWeatherView(latitude: Double?, longitude: Double?) {
-        let vc = HourlyWeatherViewController(nibName: HourlyWeatherViewController.nibName
-                                             , bundle: nil)
-        vc.configure(networkService: netverkService, latitude: latitude, longitude: longitude)
-        vc.view.frame = hourlyWeatherContainerView.bounds
+        hourlyWeatherViewControler = HourlyWeatherViewController(nibName: HourlyWeatherViewController.nibName
+                                                                 , bundle: nil)
+        hourlyWeatherViewControler.configure(networkService: netverkService, latitude: latitude, longitude: longitude)
+        hourlyWeatherViewControler.view.frame = hourlyWeatherContainerView.bounds
         hourlyWeatherContainerView.clipsToBounds = true
-        hourlyWeatherContainerView.addSubview(vc.view)
+        hourlyWeatherContainerView.addSubview(hourlyWeatherViewControler.view)
     }
     
     func getCurrentWeather(latitude: Double, longitude: Double, completion: @escaping (CurrentWeatherDTO?)-> Void){
@@ -68,7 +71,11 @@ class MainWeatherViewController: UIViewController {
 }
 extension MainWeatherViewController: LocationManagerDelegate{
     func didUpdateLocations(latitude: Double, longitude: Double) {
-        addHourlyWeatherView(latitude: latitude, longitude: longitude)
+        if !isHourlyWeatherAdded{
+            addHourlyWeatherView(latitude: latitude, longitude: longitude)
+            isHourlyWeatherAdded.toggle()
+        }
+        
         updateLabel(latitude: latitude, longitude: longitude)
     }
 }
