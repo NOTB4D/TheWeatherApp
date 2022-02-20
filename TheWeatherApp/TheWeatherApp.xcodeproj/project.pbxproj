@@ -96,6 +96,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8A3E17E27C2243A0091AD1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8D5217327C14F1E00D1D8DB /* AppDelegate.swift */,
+				B8D5217527C14F1E00D1D8DB /* SceneDelegate.swift */,
+				B8D5218127C14F2000D1D8DB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8A3E17F27C224E70091AD1C /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				B8D5217927C14F1E00D1D8DB /* Main.storyboard */,
+				B8D5217C27C14F2000D1D8DB /* Assets.xcassets */,
+				B8D5217E27C14F2000D1D8DB /* LaunchScreen.storyboard */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
 		B8D5216727C14F1E00D1D8DB = {
 			isa = PBXGroup;
 			children = (
@@ -119,13 +139,9 @@
 		B8D5217227C14F1E00D1D8DB /* TheWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B8A3E17F27C224E70091AD1C /* UIs */,
 				B8D521B827C17AFE00D1D8DB /* Utilitys */,
-				B8D5217327C14F1E00D1D8DB /* AppDelegate.swift */,
-				B8D5217527C14F1E00D1D8DB /* SceneDelegate.swift */,
-				B8D5217927C14F1E00D1D8DB /* Main.storyboard */,
-				B8D5217C27C14F2000D1D8DB /* Assets.xcassets */,
-				B8D5217E27C14F2000D1D8DB /* LaunchScreen.storyboard */,
-				B8D5218127C14F2000D1D8DB /* Info.plist */,
+				B8A3E17E27C2243A0091AD1C /* Resources */,
 				B8D521B227C1623400D1D8DB /* Screens */,
 				B8D521AD27C161D300D1D8DB /* Services */,
 			);
@@ -536,7 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TheWeatherApp/Info.plist;
+				INFOPLIST_FILE = TheWeatherApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -563,7 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TheWeatherApp/Info.plist;
+				INFOPLIST_FILE = TheWeatherApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
