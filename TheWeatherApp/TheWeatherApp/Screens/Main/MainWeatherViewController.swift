@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainWeatherViewController.swift
 //  TheWeatherApp
 //
 //  Created by Eser Kucuker on 19.02.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainWeatherViewController: UIViewController {
     
     private let netverkService: ClientNetworkServiceProtocol = ClinetNetworkService()
     private lazy var locationService : LocationManagerProtocol = {
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var hourlyWeatherContainerView: UIView!
     
     
     override func viewDidLoad() {
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
         }
     }
 }
-extension ViewController: LocationManagerDelegate{
+extension MainWeatherViewController: LocationManagerDelegate{
     func didUpdateLocations(latitude: Double, longitude: Double) {
         updateLabel(latitude: latitude, longitude: longitude)
         
