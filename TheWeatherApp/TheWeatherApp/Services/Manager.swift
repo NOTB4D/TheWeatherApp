@@ -16,6 +16,8 @@ protocol NetworkServiceProtocol {
 
 protocol ClientNetworkServiceProtocol {
     func getCurrentWeather( latitude:Double, longitude: Double, complation: @escaping(CurrentWeatherDTO?, NetworkError?)-> Void)
+    
+    func getHourlyWeather(latitude:Double, longitude: Double, complation: @escaping(HourlyWeatherDTO?, NetworkError?)-> Void)
 }
 
 protocol LocationManagerDelegate: NSObject {
